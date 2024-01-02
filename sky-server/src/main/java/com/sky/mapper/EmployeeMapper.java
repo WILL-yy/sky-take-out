@@ -21,4 +21,11 @@ public interface EmployeeMapper {
     void insert(Employee employee);
 
     Page<Employee> pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
+
+    /**
+     * 更新指定 id 的员工信息
+     * 1.启用或禁用员工
+     * @param employee
+     */
+    void update(Employee employee);
 }
