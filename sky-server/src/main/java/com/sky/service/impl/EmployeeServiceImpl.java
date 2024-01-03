@@ -121,6 +121,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public Employee getById(Long id) {
         Employee employee = employeeMapper.getById(id);
+        //从后端查询到的员工，将密码数据也一起返回过来了
+        // 为了加强安全性，将密码隐藏
+        employee.setPassword("****");
         return employee;
     }
 
